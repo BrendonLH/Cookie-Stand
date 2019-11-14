@@ -12,14 +12,27 @@ var hours = ['6am', '7am', '8am', '9am','10am', '11am', '12pm', '1pm', '2pm', '3
 var storeSales = document.getElementById('stores');
 // Seattle Shop
 
-var seattle = {
-  storeName: 'Seattle Headquarters',
-  minCustomerEachHour: 23,
-  maxCustomerEachHour: 65,
-  averageCookiesPerCustomer: 6.3,
-  customersEachHour: [],
-  cookieEachHour: [],
-  totalCookiesForTheDay: 0,
+function Shops(Shopname, minCustomers, maxCustomers, averageCookiesPer, customerEachHour, cookiesEachHour, totalCookiesForDay) {
+  this.storeName = Shopname;
+  this.minCustomerEachHour = minCustomers;
+  this.maxCustomerEachHour = maxCustomers;
+  this.averageCookiesPerCustomer = averageCookiesPer;
+  this.customersEachHour = customerEachHour;
+  this.cookieEachHour = cookiesEachHour;
+  this.totalCookiesForTheDay = totalCookiesForDay;
+}
+
+var seattle = new Shops('Seattle', 23, 65, 6.3, calculateCustomers, calculateCookies, 0 );
+
+// var seattle = {
+//   storeName: 'Seattle Headquarters',
+//   minCustomerEachHour: 23,
+//   maxCustomerEachHour: 65,
+//   averageCookiesPerCustomer: 6.3,
+//   customersEachHour: [],
+//   cookieEachHour: [],
+//   totalCookiesForTheDay: 0,
+
 
 
 
@@ -255,6 +268,122 @@ var lima = {
 function getRandom(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
+
+var table = document.getElementById('table-container');
+
+
+var tbodyEl = document.createElement('tbody');
+
+
+var trEl = document.createElement('tr');
+var thEl = document.createElement('th');
+thEl.textContent = 'Column 1';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = 'Column 2';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = 'Column 3';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = 'Column 4';
+trEl.appendChild(thEl);
+
+thEl.textContent = 'Column 1';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = 'Column 2';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = 'Column 3';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = 'Column 4';
+trEl.appendChild(thEl);
+thEl.textContent = 'Column 1';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = 'Column 2';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = 'Column 3';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = 'Column 4';
+trEl.appendChild(thEl);
+
+thEl.textContent = 'Column 1';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = 'Column 2';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = 'Column 3';
+trEl.appendChild(thEl);
+
+thEl = document.createElement('th');
+thEl.textContent = 'Column 4';
+trEl.appendChild(thEl);
+
+tbodyEl.appendChild(trEl);
+trEl = document.createElement('tr');
+thEl = document.createElement('th');
+thEl.textContent = 'Data Row 1';
+trEl.appendChild(thEl);
+
+var tdEl = document.createElement('td');
+tdEl.textContent = 'one';
+trEl.appendChild(tdEl);
+
+tdEl = document.createElement('td');
+tdEl.textContent = 'Two';
+trEl.appendChild(tdEl);
+
+tdEl = document.createElement('td');
+tdEl.textContent = 'Three';
+trEl.appendChild(tdEl);
+
+tbodyEl.appendChild(trEl);
+
+trEl = document.createElement('tr');
+thEl = document.createElement('th');
+thEl.textContent = 'Data Row 2';
+trEl.appendChild(thEl);
+
+tdEl = document.createElement('td');
+tdEl.textContent = 'one';
+trEl.appendChild(tdEl);
+
+tdEl = document.createElement('td');
+tdEl.textContent = 'two';
+trEl.appendChild(tdEl);
+
+tdEl = document.createElement('td');
+tdEl.textContent = 'three';
+trEl.appendChild(tdEl);
+
+tbodyEl.appendChild(trEl);
+
+
+
+
+table.appendChild(tbodyEl);
+
+
+
+
+
 
 seattle.render();
 tokyo.render();

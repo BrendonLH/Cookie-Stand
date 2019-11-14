@@ -10,5 +10,9 @@ This is The salmon cookies project.
     b. changed out sales JS file to mirror one done in class. 
     c. finished the cities.
 
+## Class-7-Constructors
+    1. 11/13/2019
+        a. Added constructor function to Cookie.js file.
+
 <!-- TO DO'S -->
 1. figure out why cookies on 2 hours are the same. checkout cookies and customers function. 
