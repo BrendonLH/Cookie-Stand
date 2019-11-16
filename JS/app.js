@@ -22,6 +22,7 @@ function CookieShop(storeName, minCust, maxCust, avgCookie) {
   this.generateHourlyCookies();
   // generate shop row upon instantiation
   this.renderShopRow();
+  console.log(this.cookieEachHour);
 }
 
 
@@ -93,27 +94,54 @@ CookieShop.prototype.renderShopRow = function() {
 
 
 // render footer row
-var renderFoooterRow = function() {
+var renderFooterRow = function() {
   var trEl = document.createElement('tr');
   var tdEl = document.createElement('td');
-
+  var thEl = document.createElement('th');
+  thEl.textContent = 'Total';
+  trEl.appendChild(thEl);
+  
   for(var i = 0; i <CookieShop.hours.length; i ++) {
     var storeHourlyTotals = 0;
-    var td = document.createElement('td');
-
-    for( var j = 0; j <CookieShop.hours.length; j ++) {
+    tdEl = document.createElement('td');
+    
+    for( var j = 0; j < CookieShop.allStores.length; j ++) {
+      // console.log(CookieShop.cookieEachHour[i])
       storeHourlyTotals += CookieShop.allStores[j].cookieEachHour[i];
     }
-    td.textContent = storeHourlyTotals;
-    trEl.appendChild(td);
+    
+    
+    tdEl.textContent = storeHourlyTotals;
+    trEl.appendChild(tdEl);
   }
-}
 
-var tdElem = document.createElement('td');
 
-new CookieShop('seattle', 34, 30, 2.5);
-new CookieShop('seattle', 34, 30, 2.5);
-new CookieShop('seattle', 34, 30, 2.5);
+  var tdElem = document.createElement('td');
+  tdElem.textContent = CookieShop.allStoresTotal;
+  trEl.appendChild(tdElem);
+  CookieShop.tableDataEl.appendChild(trEl);
+};
+
+
+
+
+new CookieShop('Seattle', 23, 65, 6.3);
+new CookieShop('Tokyo', 3, 24, 1.2);
+new CookieShop('Dubai', 11, 38, 3.7);
+new CookieShop('Paris', 20, 38, 2.3);
+new CookieShop('Lima', 2, 16, 4.6);
+
+
+
+
+renderFooterRow();
+
+// <!-- Seattle	23	65	6.3
+// Tokyo	3	24	1.2
+// Dubai	11	38	3.7
+// Paris	20	38	2.3
+// Lima	2	16	4.6 -->
+
 // store HTML point of contact
 // var seattleElement = document.getElementById('seattle');
 // create The element
