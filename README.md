@@ -13,6 +13,7 @@ This is The salmon cookies project.
 ## Class-7-Constructors
     1. 11/13/2019
         a. Added constructor function to Cookie.js file.
+        b. refactored constructor code per class demo. 
 
 <!-- TO DO'S -->
 1. figure out why cookies on 2 hours are the same. checkout cookies and customers function. 
