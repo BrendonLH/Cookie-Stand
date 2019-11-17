@@ -14,6 +14,9 @@ This is The salmon cookies project.
     1. 11/13/2019
         a. Added constructor function to Cookie.js file.
         b. refactored constructor code per class demo. 
+## class-8-Forms
+    1. 11/17/2019
+        a. Added some new CSS and styling to the page as well as simple navbar. 
 
 <!-- TO DO'S -->
 1. figure out why cookies on 2 hours are the same. checkout cookies and customers function. 
