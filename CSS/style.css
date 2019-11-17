@@ -2,3 +2,30 @@ h1 {
     font-size: 150%;
     margin-left:auto;
 }
+
+.navbar {
+    background-color: salmon;
+}
+header {
+    margin-right: 4%;
+}
+
+body {
+    text-align: center;
+    margin: auto;
+}
+img {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 50%;
+}
+#salesFish {
+    width: 20%;
+}
+table {
+    border: 2px outset salmon;
+    text-align: center;
+    margin:auto;
+}
