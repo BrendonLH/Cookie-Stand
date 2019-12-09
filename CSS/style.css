@@ -9,7 +9,8 @@ div {
     background-repeat: no-repeat;
     height: 400px;
     width: 770px;
-    border: 1px solid;
+    border: 10px solid salmon;
+    border-style: outset;
     margin-top: 4%;
 }
 
@@ -38,8 +39,15 @@ h2 {
 
 
 img {
-    display: block;
-    width: 10%;
+    display:inline-block;
+    width: 20%;
+    margin-top:5%;
+    margin-left: 10%;
+    border: 5px solid salmon;
+    border-style: inset;
+}
+footer {
+    margin-right: 100px;
 }
 table {
     border: 2px outset salmon;
