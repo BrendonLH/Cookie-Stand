@@ -2,6 +2,8 @@ body {
     text-align: center;
     margin:auto;
     width: 50%;
+    background-color: seashell;
+    color: brown;
 }
 div {
     background-image: url("/IMG/family.jpg");
